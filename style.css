@@ -1,0 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animated Skill Bars */
+.skill-bar {
+  animation: grow 2s ease-in-out;
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+}
