@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vidhi Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 py-4">
+<div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+<div class="logo">Vidhi</div>
+<div>
+<a href="index.html" class="nav-link">Home</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="service.html" class="nav-link">Service</a>
+<a href="resume.html" class="nav-link">Resume</a>
+<a href="project.html" class="nav-link">Project</a>
+<a href="contact.html" class="nav-link">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- HOME -->
+<section class="min-h-screen flex items-center justify-center text-center pt-24">
+<div>
+<h1 class="text-4xl font-bold mb-6">Welcome To My Website</h1>
+
+<h2 class="text-2xl mb-8">
+<span id="typing-text" class="typing-text"></span>
+<span class="cursor">|</span>
+</h2>
+
+<div class="space-x-4">
+<a href="#" class="btn-green">View Work</a>
+<a href="#" class="btn-green">Hire Me</a>
+</div>
+</div>
+</section>
+
+<script>
+const texts = ["I'm Vidhi Patel", "I'm Web Developer", "I'm Photographer"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+if(count === texts.length){ count = 0; }
+currentText = texts[count];
+letter = currentText.slice(0, ++index);
+document.getElementById("typing-text").textContent = letter;
+
+if(letter.length === currentText.length){
+setTimeout(erase, 1500);
+return;
+}
+setTimeout(type, 100);
+})();
+
+function erase(){
+letter = currentText.slice(0, --index);
+document.getElementById("typing-text").textContent = letter;
+
+if(letter.length === 0){
+count++;
+setTimeout(type, 200);
+return;
+}
+setTimeout(erase, 50);
+}
+</script>
+
+</body>
+</html>
