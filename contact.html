@@ -1,0 +1,25 @@
+<section class="min-h-screen pt-28 text-center px-6">
+<h2 class="text-4xl font-bold page-title mb-6">Get In Touch</h2>
+</section> 
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let subject = document.getElementById("subject").value.trim();
+let message = document.getElementById("message").value.trim();
+
+let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if(name === "" || email === "" || subject === "" || message === ""){
+alert("All fields are required! Please fill Name, Email, Subject and Message.");
+}
+else if(!email.match(emailPattern)){
+alert("Invalid Email Address! Please enter correct email.");
+}
+else{
+alert("Message Successfully Sent!");
+}
+});
+</script>
