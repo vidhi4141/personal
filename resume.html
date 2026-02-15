@@ -1,15 +1,88 @@
-<section class="min-h-screen pt-28 text-center px-6">
-<h2 class="text-4xl font-bold mb-6">My Resume</h2>
-<p class="mb-16">Experienced web developer with strong knowledge of frontend technologies and modern UI design.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Vidhi Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="max-w-4xl mx-auto text-left space-y-12">
-<div>
-<h3 class="text-2xl font-semibold mb-4">Education:</h3>
-<p>Bachelor in Computer Science – 2023</p>
-</div>
-<div>
-<h3 class="text-2xl font-semibold mb-4">Experience:</h3>
-<p>Frontend Developer – 2 Years Experience</p>
-</div>
-</div>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#0f172a] text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 py-4 border-b border-gray-800 bg-[#0f172a]">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+
+        <div class="text-2xl font-bold text-[#10b981]">
+            Vidhi
+        </div>
+
+        <div class="space-x-6 hidden md:block">
+            <a href="index.html" class="text-white hover:text-[#10b981]">Home</a>
+            <a href="about.html" class="text-white hover:text-[#10b981]">About</a>
+            <a href="service.html" class="text-white hover:text-[#10b981]">Service</a>
+            <a href="resume.html" class="text-white hover:text-[#10b981]">Resume</a>
+            <a href="project.html" class="text-white hover:text-[#10b981]">Project</a>
+            <a href="contact.html" class="text-white hover:text-[#10b981]">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- RESUME SECTION -->
+<section class="min-h-screen py-20 pt-32 px-6">
+
+    <div class="max-w-6xl mx-auto text-center">
+
+        <!-- Title -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#10b981]">
+            My Resume
+        </h2>
+
+        <!-- Resume Intro Paragraph -->
+        <p class="text-gray-300 max-w-3xl mx-auto mb-16">
+            I am a dedicated and detail-oriented Web Developer with strong 
+            expertise in frontend development and modern UI design. 
+            I focus on building responsive, high-performance websites 
+            that deliver excellent user experience across all devices.
+        </p>
+
+        <!-- Education & Experience Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+
+            <!-- Education -->
+            <div class="border border-gray-800 p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-[#10b981]">
+                    Education
+                </h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Bachelor of Computer Science – 2023 <br>
+                    Specialized in Web Technologies and Software Development.
+                </p>
+            </div>
+
+            <!-- Experience -->
+            <div class="border border-gray-800 p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-[#10b981]">
+                    Experience
+                </h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Frontend Developer – 2+ Years Experience <br>
+                    Worked on responsive websites, UI/UX design,
+                    and modern web applications.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+</body>
+</html>
