@@ -1,25 +1,104 @@
-<section class="min-h-screen pt-28 text-center px-6">
-<h2 class="text-4xl font-bold page-title mb-6">Get In Touch</h2>
-</section> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Vidhi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0f172a] text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 py-4 border-b border-gray-800 bg-[#0f172a]">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+
+        <div class="text-2xl font-bold text-[#10b981]">
+            Vidhi
+        </div>
+
+        <div class="space-x-6 hidden md:block">
+            <a href="index.html" class="text-white hover:text-[#10b981]">Home</a>
+            <a href="about.html" class="text-white hover:text-[#10b981]">About</a>
+            <a href="service.html" class="text-white hover:text-[#10b981]">Service</a>
+            <a href="resume.html" class="text-white hover:text-[#10b981]">Resume</a>
+            <a href="project.html" class="text-white hover:text-[#10b981]">Project</a>
+            <a href="contact.html" class="text-[#10b981]">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section class="min-h-screen pt-32 pb-20 px-6 text-center">
+
+    <div class="max-w-3xl mx-auto">
+
+        <!-- Title -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#10b981]">
+            Get In Touch
+        </h2>
+
+        <!-- Professional Paragraph -->
+        <p class="text-gray-300 mb-12">
+            Feel free to contact me for project collaborations, 
+            freelance work, or any professional inquiries. 
+            I will respond as soon as possible.
+        </p>
+
+        <!-- Contact Form -->
+        <form id="contactForm" class="space-y-6">
+
+            <input type="text" id="name" placeholder="Your Name"
+                class="w-full p-3 bg-slate-800 border border-gray-700 rounded focus:outline-none focus:border-[#10b981]">
+
+            <input type="email" id="email" placeholder="Your Email"
+                class="w-full p-3 bg-slate-800 border border-gray-700 rounded focus:outline-none focus:border-[#10b981]">
+
+            <input type="text" id="subject" placeholder="Subject"
+                class="w-full p-3 bg-slate-800 border border-gray-700 rounded focus:outline-none focus:border-[#10b981]">
+
+            <textarea id="message" rows="5" placeholder="Your Message"
+                class="w-full p-3 bg-slate-800 border border-gray-700 rounded focus:outline-none focus:border-[#10b981]"></textarea>
+
+            <button type="submit"
+                class="px-8 py-3 border-2 border-[#10b981] rounded 
+                       hover:bg-[#10b981] hover:text-black transition duration-300">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- VALIDATION SCRIPT -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e){
-e.preventDefault();
+    e.preventDefault();
 
-let name = document.getElementById("name").value.trim();
-let email = document.getElementById("email").value.trim();
-let subject = document.getElementById("subject").value.trim();
-let message = document.getElementById("message").value.trim();
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
 
-let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-if(name === "" || email === "" || subject === "" || message === ""){
-alert("All fields are required! Please fill Name, Email, Subject and Message.");
-}
-else if(!email.match(emailPattern)){
-alert("Invalid Email Address! Please enter correct email.");
-}
-else{
-alert("Message Successfully Sent!");
-}
+    if(name === "" || email === "" || subject === "" || message === ""){
+        alert("Message Not Sent! Please fill Name, Email, Subject and Message.");
+    }
+    else if(!email.match(emailPattern)){
+        alert("Invalid Email Address! Please enter a correct email.");
+    }
+    else{
+        alert("Message Successfully Sent!");
+        document.getElementById("contactForm").reset();
+    }
 });
 </script>
+
+</body>
+</html>
