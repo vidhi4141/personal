@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Vidhi Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#0f172a] text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 py-4 border-b border-gray-800 bg-[#0f172a]">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-[#10b981]">
+            Vidhi
+        </div>
+
+        <!-- Menu -->
+        <div class="space-x-6 hidden md:block">
+            <a href="index.html" class="text-white hover:text-[#10b981]">Home</a>
+            <a href="about.html" class="text-white hover:text-[#10b981]">About</a>
+            <a href="service.html" class="text-white hover:text-[#10b981]">Service</a>
+            <a href="resume.html" class="text-white hover:text-[#10b981]">Resume</a>
+            <a href="project.html" class="text-white hover:text-[#10b981]">Project</a>
+            <a href="contact.html" class="text-white hover:text-[#10b981]">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="min-h-screen py-20 pt-32">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- Title -->
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-[#10b981]">
+            About Myself
+        </h2>
+
+        <!-- Intro -->
+        <p class="text-center text-gray-300 max-w-3xl mx-auto mb-16">
+            I am a passionate Web Developer focused on building responsive,
+            modern, and user-friendly websites that work smoothly across all devices.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- Image -->
+            <img src="images/about.jpg"
+                 alt="Vidhi Patel"
+                 class="w-full rounded-lg shadow-lg">
+
+            <!-- Content -->
+            <div>
+
+                <h3 class="text-2xl font-semibold mb-4 text-[#10b981]">
+                    Hey! I'm A Professional Web Developer
+                </h3>
+
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    I specialize in creating high-quality websites using modern
+                    technologies. My goal is to deliver clean design,
+                    smooth performance, and excellent user experience.
+                </p>
+
+                <div class="space-y-2 text-gray-300 mb-8">
+                    <p><strong>Name:</strong> Vidhi Patel</p>
+                    <p><strong>Age:</strong> 21</p>
+                    <p><strong>Address:</strong> Dhaka, Bangladesh</p>
+                    <p><strong>Phone:</strong> +00 530-445-9283</p>
+                    <p><strong>Email:</strong> info@example.com</p>
+                </div>
+
+                <button onclick="downloadCV()" 
+                        class="border-2 border-[#10b981] px-6 py-3 rounded 
+                               hover:bg-[#10b981] hover:text-black transition duration-300">
+                    Download CV
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Download Script -->
+<script>
+function downloadCV(){
+    alert("Successfully Downloaded CV!");
+}
+</script>
+
+</body>
+</html>
