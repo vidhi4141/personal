@@ -1,83 +1,131 @@
-/* ===== GLOBAL ===== */
+/* ===============================
+   GLOBAL SETTINGS
+================================= */
 
-body {
-    background-color: #0f172a; /* Dark Blue */
-    color: white;
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* ===== NAVBAR ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f172a;   /* Dark Blue */
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   COLORS
+================================= */
+
+.primary {
+    color: #10b981;  /* Light Green */
+}
+
+.bg-primary {
+    background-color: #10b981;
+}
+
+/* ===============================
+   NAVBAR
+================================= */
 
 nav {
-    background-color: #0f172a;
+    background: #0f172a;
     border-bottom: 1px solid #1e293b;
 }
 
-.logo {
-    color: #10b981; /* Light Green */
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.nav-link {
-    color: white;
-    margin-left: 20px;
+nav a {
     text-decoration: none;
+    color: white;
     transition: 0.3s;
 }
 
-.nav-link:hover {
+nav a:hover {
     color: #10b981;
 }
 
-/* ===== PAGE TITLE ===== */
+/* ===============================
+   SECTION TITLE
+================================= */
 
 .page-title {
+    font-size: 36px;
+    font-weight: bold;
     color: #10b981;
 }
 
-/* ===== BUTTON ===== */
-
-.btn-green {
-    border: 2px solid #10b981;
-    padding: 10px 25px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.btn-green:hover {
-    background-color: #10b981;
-    color: black;
-}
-
-/* ===== SERVICE BOX ===== */
+/* ===============================
+   SERVICE BOX
+================================= */
 
 .service-box {
+    background: #1e293b;
     padding: 30px;
-    border: 1px solid #1e293b;
-    border-radius: 8px;
-    transition: 0.3s;
+    border-radius: 12px;
+    transition: 0.4s;
 }
 
 .service-box:hover {
-    background-color: #10b981;
+    transform: translateY(-8px);
+    background: #334155;
+}
+
+/* ===============================
+   RESUME SECTION
+================================= */
+
+.resume-container {
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ===============================
+   BUTTON
+================================= */
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: #10b981;
     color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* ===== TYPING EFFECT ===== */
-
-.typing-text {
-    color: #10b981;
+.btn:hover {
+    transform: scale(1.05);
 }
 
-.cursor {
-    display: inline-block;
+/* ===============================
+   TYPING EFFECT CURSOR
+================================= */
+
+.typing::after {
+    content: "|";
+    animation: blink 1s infinite;
     margin-left: 5px;
-    color: #10b981;
-    animation: blink 0.8s infinite;
 }
 
 @keyframes blink {
@@ -85,3 +133,51 @@ nav {
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+/* ===============================
+   SCROLLBAR DESIGN
+================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 10px;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer {
+    background: #0f172a;
+    border-top: 1px solid #1e293b;
+    padding: 20px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+/* ===============================
+   RESPONSIVE TEXT
+================================= */
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
