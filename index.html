@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidhi Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* Extra Responsive Improvements */
+@media (max-width: 768px){
+    .nav-menu{
+        display:none;
+    }
+}
+</style>
+
+</head>
+<body class="overflow-x-hidden">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 py-4">
+<div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+    
+    <div class="logo text-2xl font-bold">Vidhi</div>
+
+    <div class="nav-menu space-x-6 hidden md:block">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="service.html" class="nav-link">Service</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="project.html" class="nav-link">Project</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+</div>
+</nav>
+
+<!-- HOME SECTION -->
+<section class="min-h-screen flex items-center justify-center text-center px-6 pt-24">
+<div>
+
+    <h1 class="text-3xl md:text-5xl font-bold mb-6">
+        Welcome To My Website
+    </h1>
+
+    <!-- FAST TYPING EFFECT -->
+    <h2 class="text-xl md:text-3xl font-semibold mb-8">
+        <span id="typing"></span>
+        <span class="cursor">|</span>
+    </h2>
+
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="#" class="btn-green">View Work</a>
+        <a href="#" class="btn-green">Hire Me</a>
+    </div>
+
+</div>
+</section>
+
+<script>
+
+/* FAST PROFESSIONAL TYPING EFFECT */
+
+const words = ["I'm Vidhi Patel", "Web Developer", "Creative Designer"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.getElementById("typing");
+
+function typeEffect(){
+
+    let currentWord = words[wordIndex];
+    
+    if(isDeleting){
+        typingElement.textContent = currentWord.substring(0, charIndex--);
+    } else {
+        typingElement.textContent = currentWord.substring(0, charIndex++);
+    }
+
+    let speed = isDeleting ? 40 : 80;
+
+    if(!isDeleting && charIndex === currentWord.length){
+        speed = 800; // pause after typing
+        isDeleting = true;
+    }
+    else if(isDeleting && charIndex === 0){
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        speed = 300;
+    }
+
+    setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+
+</script>
+
+</body>
+</html>
