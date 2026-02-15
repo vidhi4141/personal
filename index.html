@@ -108,7 +108,7 @@ function typeEffect(){
         typingElement.textContent = currentWord.substring(0, charIndex++);
     }
 
-    let speed = isDeleting ? 40 : 90;
+    let speed = isDeleting ? 50 : 90;
 
     if(!isDeleting && charIndex === currentWord.length){
         speed = 900;
@@ -117,7 +117,7 @@ function typeEffect(){
     else if(isDeleting && charIndex === 0){
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        speed = 300;
+        speed = 500;
     }
 
     setTimeout(typeEffect, speed);
