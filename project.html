@@ -1,46 +1,79 @@
-<section class="min-h-screen pt-28 text-center px-6">
-<h2 class="text-4xl font-bold mb-6">My Portfolio</h2>
-<p class="mb-12">Creative portfolio projects including branding and web applications.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Vidhi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="flex justify-center space-x-6 mb-12">
-<button class="filter-btn">All</button>
-<button class="filter-btn">Branding</button>
-<button class="filter-btn">Application</button>
-<button class="filter-btn">Development</button>
-</div>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<img src="images/p1.jpg">
-<img src="images/p2.jpg">
-<img src="images/p3.jpg">
-<img src="images/p4.jpg">
-<img src="images/p5.jpg">
-<img src="images/p6.jpg">
-</div>
+<body class="bg-[#0f172a] text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 py-4 border-b border-gray-800 bg-[#0f172a]">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-[#10b981]">
+            Vidhi
+        </div>
+
+        <!-- Menu -->
+        <div class="space-x-6 hidden md:block">
+            <a href="index.html" class="text-white hover:text-[#10b981]">Home</a>
+            <a href="about.html" class="text-white hover:text-[#10b981]">About</a>
+            <a href="service.html" class="text-white hover:text-[#10b981]">Service</a>
+            <a href="resume.html" class="text-white hover:text-[#10b981]">Resume</a>
+            <a href="project.html" class="text-[#10b981]">Project</a>
+            <a href="contact.html" class="text-white hover:text-[#10b981]">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- PORTFOLIO SECTION -->
+<section class="min-h-screen pt-32 pb-20 px-6 text-center">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- Title -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#10b981]">
+            My Portfolio
+        </h2>
+
+        <!-- Related Paragraph -->
+        <p class="text-gray-300 max-w-3xl mx-auto mb-12">
+            Here are some of my recent projects showcasing modern design,
+            responsive layouts, and creative digital solutions built with
+            performance and user experience in mind.
+        </p>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="px-6 py-2 bg-[#10b981] text-black rounded">All</button>
+            <button class="px-6 py-2 border border-gray-700 hover:bg-[#10b981] hover:text-black transition rounded">Branding</button>
+            <button class="px-6 py-2 border border-gray-700 hover:bg-[#10b981] hover:text-black transition rounded">Application</button>
+            <button class="px-6 py-2 border border-gray-700 hover:bg-[#10b981] hover:text-black transition rounded">Development</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+            <img src="images/p1.jpg" class="rounded-lg shadow-lg hover:scale-105 transition duration-300" alt="">
+            <img src="images/p2.jpg" class="rounded-lg shadow-lg hover:scale-105 transition duration-300" alt="">
+            <img src="images/p3.jpg" class="rounded-lg shadow-lg hover:scale-105 transition duration-300" alt="">
+            <img src="images/p4.jpg" class="rounded-lg shadow-lg hover:scale-105 transition duration-300" alt="">
+            <img src="images/p5.jpg" class="rounded-lg shadow-lg hover:scale-105 transition duration-300" alt="">
+            <img src="images/p6.jpg" class="rounded-lg shadow-lg hover:scale-105 transition duration-300" alt="">
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="py-20 text-center">
-<div class="grid md:grid-cols-4 gap-10 max-w-6xl mx-auto">
+</body>
+</html>
 
-<div>
-<h2 class="text-4xl font-bold text-green-500">80+</h2>
-<p>Successful Projects</p>
-</div>
-
-<div>
-<h2 class="text-4xl font-bold text-green-500">720k</h2>
-<p>Happy Clients</p>
-</div>
-
-<div>
-<h2 class="text-4xl font-bold text-green-500">90+</h2>
-<p>Awards Received</p>
-</div>
-
-<div>
-<h2 class="text-4xl font-bold text-green-500">820k</h2>
-<p>Customers</p>
-</div>
-
-</div>
-</section>
