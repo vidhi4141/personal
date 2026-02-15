@@ -180,4 +180,28 @@ footer {
         font-size: 14px;
     }
 }
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll To Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #10b981;
+    color: black;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+#scrollTopBtn:hover {
+    transform: scale(1.1);
+}
+
 
