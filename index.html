@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-/* Extra Responsive Improvements */
+/* Hide menu on small screen */
 @media (max-width: 768px){
     .nav-menu{
         display:none;
@@ -18,21 +18,25 @@
 </style>
 
 </head>
-<body class="overflow-x-hidden">
+
+<body id="top" class="bg-[#0f172a] text-white overflow-x-hidden">
 
 <!-- NAVBAR -->
-<nav class="fixed w-full z-50 py-4">
+<nav class="fixed w-full z-50 py-4 bg-[#0f172a] border-b border-slate-800">
 <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
     
-    <div class="logo text-2xl font-bold">Vidhi</div>
+    <!-- LOGO -->
+    <div class="text-2xl font-bold text-[#10b981]">
+        Vidhi
+    </div>
 
     <div class="nav-menu space-x-6 hidden md:block">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="service.html" class="nav-link">Service</a>
-        <a href="resume.html" class="nav-link">Resume</a>
-        <a href="project.html" class="nav-link">Project</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="index.html" class="hover:text-[#10b981] transition">Home</a>
+        <a href="about.html" class="hover:text-[#10b981] transition">About</a>
+        <a href="service.html" class="hover:text-[#10b981] transition">Service</a>
+        <a href="resume.html" class="hover:text-[#10b981] transition">Resume</a>
+        <a href="project.html" class="hover:text-[#10b981] transition">Project</a>
+        <a href="contact.html" class="hover:text-[#10b981] transition">Contact</a>
     </div>
 
 </div>
@@ -47,24 +51,48 @@
     </h1>
 
     <!-- FAST TYPING EFFECT -->
-    <h2 class="text-xl md:text-3xl font-semibold mb-8">
+    <h2 class="text-xl md:text-3xl font-semibold mb-8 text-[#10b981]">
         <span id="typing"></span>
-        <span class="cursor">|</span>
+        <span class="animate-pulse">|</span>
     </h2>
 
+    <!-- BUTTONS -->
     <div class="flex flex-col md:flex-row gap-4 justify-center">
-        <a href="#" class="btn-green">View Work</a>
-        <a href="#" class="btn-green">Hire Me</a>
+
+        <!-- VIEW WORK -->
+        <a href="project.html"
+           class="px-8 py-3 border-2 border-[#10b981] 
+                  hover:bg-[#10b981] hover:text-black 
+                  transition duration-300 rounded">
+            View Work
+        </a>
+
+        <!-- HIRE ME -->
+        <a href="contact.html"
+           class="px-8 py-3 border-2 border-[#10b981] 
+                  hover:bg-[#10b981] hover:text-black 
+                  transition duration-300 rounded">
+            Hire Me
+        </a>
+
     </div>
 
 </div>
 </section>
 
+<!-- SCROLL TO TOP BUTTON (NO JS) -->
+<a href="#top"
+   class="fixed bottom-6 right-6 bg-[#10b981] text-black 
+          px-4 py-3 rounded-full shadow-lg 
+          hover:scale-110 transition duration-300">
+   ↑
+</a>
+
 <script>
 
 /* FAST PROFESSIONAL TYPING EFFECT */
 
-const words = ["I'm Vidhi Patel", "Web Developer", "Creative Designer"];
+const words = ["I'm Vidhi Patel", "I'm Web Developer", "I'm Creative Designer"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -83,7 +111,7 @@ function typeEffect(){
     let speed = isDeleting ? 40 : 80;
 
     if(!isDeleting && charIndex === currentWord.length){
-        speed = 800; // pause after typing
+        speed = 800;
         isDeleting = true;
     }
     else if(isDeleting && charIndex === 0){
