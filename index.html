@@ -92,7 +92,7 @@
 
 /* FAST PROFESSIONAL TYPING EFFECT */
 
-const words = ["I'm Vidhi Patel", "I'm Web Developer", "I'm Creative Designer"];
+const words = ["I Am Vidhi Patel", "I Am Web Developer", "I Am Creative Designer"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -108,16 +108,16 @@ function typeEffect(){
         typingElement.textContent = currentWord.substring(0, charIndex++);
     }
 
-    let speed = isDeleting ? 50 : 90;
+    let speed = isDeleting ? 80 : 150;
 
     if(!isDeleting && charIndex === currentWord.length){
-        speed = 900;
+        speed = 1500;
         isDeleting = true;
     }
     else if(isDeleting && charIndex === 0){
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        speed = 500;
+        speed = 800;
     }
 
     setTimeout(typeEffect, speed);
